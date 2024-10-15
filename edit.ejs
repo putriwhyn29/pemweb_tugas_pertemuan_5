@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data Pengguna</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+    <h2>Edit Data Pengguna</h2>
+    <form action="/update/<%= user.id %>" method="post">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required value="<%= user.nama %>"><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required value="<%= user.email %>"><br>
+        <label for="phone">Telepon:</label>
+        <input type="text" name="phone" id="phone" required value="<%= user.phone %>"><br>
+        <button type="submit">Simpan</button>
+    </form>
+</body>
+</html>
